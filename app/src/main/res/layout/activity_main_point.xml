@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    >
+
+  <TextView
+      android:id="@+id/title1"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingTop="@dimen/home_page_title_padding_top"
+      android:paddingBottom="@dimen/home_page_title_padding_bottom"
+      android:fontFamily="google-sans"
+      android:gravity="center_horizontal"
+      android:text="@string/title_point"
+      android:textColor="@color/white"
+      android:textSize="@dimen/home_page_title_size"/>
+  <ImageView
+      android:id="@+id/imageView1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/mypoint" />
+  <TextView
+      android:id="@+id/point"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingTop="@dimen/home_page_title_padding_top"
+      android:paddingBottom="@dimen/home_page_point_padding_bottom"
+      android:fontFamily="google-sans"
+      android:gravity="center_horizontal"
+      android:text="@string/title_point"
+      android:textColor="@color/white"
+      android:textSize="@dimen/home_page_title_size"/>
+  <ImageButton
+      android:id="@+id/btnPointplus"
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:layout_gravity="center"
+      android:background="@null"
+      android:scaleType="centerCrop"
+      android:src="@drawable/plus" />
+  <TextView
+      android:id="@+id/pointplus"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingTop="@dimen/home_page_point_padding_top"
+      android:paddingBottom="@dimen/home_page_point_padding_bottom"
+      android:fontFamily="google-sans"
+      android:gravity="center_horizontal"
+      android:text="@string/title_pointplus"
+      android:textColor="@color/white"
+      android:textSize="@dimen/home_page_point_size"/>
+  <ImageButton
+      android:id="@+id/btnPointminus"
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:layout_gravity="center"
+      android:background="@null"
+      android:scaleType="centerCrop"
+      android:src="@drawable/minus" />
+  <TextView
+      android:id="@+id/pointminus"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingTop="@dimen/home_page_point_padding_top"
+      android:paddingBottom="@dimen/home_page_point_padding_bottom"
+      android:fontFamily="google-sans"
+      android:gravity="center_horizontal"
+      android:text="@string/title_pointminus"
+      android:textColor="@color/white"
+      android:textSize="@dimen/home_page_title_size"/>
+  <!--
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/mode_recycler_view"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:scrollbars="vertical"/>
+    -->
+
+</LinearLayout>

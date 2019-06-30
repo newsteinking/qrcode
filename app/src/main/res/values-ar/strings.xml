@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">Machine Learning</string>
+    <string name="mode_odt_live_barcode_title">Barcode and QR Search</string>
+    <string name="mode_odt_live_barcode_subtitle">Learn how to search for images with barcodes or QR.</string>
+    <string name="mode_odt_live_image_label_title">Image Label Search</string>
+    <string name="mode_odt_live_image_label_subtitle">Try image search with machine learning</string>
+    <string name="mode_odt_live_text_title">Text Recognition</string>
+    <string name="mode_odt_live_text_subtitle">Simply try to recognize the letters.</string>
+
+
+</resources>

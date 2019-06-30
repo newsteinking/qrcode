@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.seanlab.qrcode.mlkit">
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+
+    <application
+        android:name="com.seanlab.qrcode.mlkit.ghost.SpectreApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning">
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name="com.seanlab.qrcode.mlkit.activity.CardScannerActivity"
+            android:theme="@style/AppThemeNoActionbar">
+            <meta-data
+                android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+                android:value="text" />
+        </activity>
+        <activity
+            android:name="com.seanlab.qrcode.mlkit.activity.ImageLabelActivity"
+            android:theme="@style/AppThemeNoActionbar">
+            <meta-data
+                android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+                android:value="label" />
+        </activity>
+
+        <activity
+            android:name="com.seanlab.qrcode.mlkit.activity.FaceDetectionActivity"
+            android:theme="@style/AppThemeNoActionbar">
+            <meta-data
+                android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+                android:value="face" />
+        </activity>
+
+        <activity
+            android:name="com.seanlab.qrcode.mlkit.activity.HomeActivity"
+            android:launchMode="singleTop">
+            <!--
+           <intent-filter>
+               <action android:name="android.intent.action.MAIN" />
+               <category android:name="android.intent.category.LAUNCHER" />
+           </intent-filter>
+           -->
+        </activity>
+
+        <activity
+            android:name="com.seanlab.qrcode.mlkit.activity.BarCodeReaderActivity"
+            android:theme="@style/AppThemeNoActionbar">
+            <meta-data
+                android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+                android:value="barcode" />
+        </activity>
+
+        <activity
+            android:name="com.seanlab.qrcode.mlkit.activity.LandmarkDetectorActivity"
+            android:parentActivityName="com.seanlab.qrcode.mlkit.activity.HomeActivity">
+
+        </activity>
+        <activity android:name="com.seanlab.qrcode.mlkit.activity.PokemonDetectorActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+
+        <!--  google -->
+        <activity
+            android:name="com.seanlab.qrcode.mlkit.md.EntryChoiceActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            -->
+        </activity>
+
+        <activity
+            android:name="com.seanlab.qrcode.mlkit.md.java.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+
+                <intent-filter>
+                    <action android:name="android.intent.action.MAIN" />
+                    <category android:name="android.intent.category.LAUNCHER" />
+                </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name="com.seanlab.qrcode.mlkit.md.java.LiveObjectDetectionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+                android:value="label" />
+        </activity>
+        <activity
+            android:name="com.seanlab.qrcode.mlkit.md.java.LiveObjectCloudDetectionPayActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+                android:value="label" />
+        </activity>
+        <!--  -->
+        <activity
+            android:name="com.seanlab.qrcode.mlkit.md.java.LiveObjectCloudDetectionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+                android:value="label" />
+        </activity>
+        <activity
+            android:name="com.seanlab.qrcode.mlkit.md.java.LiveObjectCloudImageDetectionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+                android:value="label" />
+        </activity>
+        <activity
+            android:name="com.seanlab.qrcode.mlkit.md.java.LiveObjectCloudTextDetectionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+                android:value="ocr" />
+        </activity>
+        <activity
+            android:name="com.seanlab.qrcode.mlkit.md.java.LiveObjectCloudLandDetectionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+                android:value="label" />
+        </activity>
+        <activity
+            android:name="com.seanlab.qrcode.mlkit.md.java.LiveBarcodeScanningActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+                android:value="barcode" />
+        </activity>
+        <activity
+            android:name="com.seanlab.qrcode.mlkit.md.java.WebHomeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.seanlab.qrcode.mlkit.md.java.PointActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+        </activity>
+
+
+        <!--  -->
+        <activity
+            android:name="com.seanlab.qrcode.mlkit.md.java.StaticObjectDetectionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.seanlab.qrcode.mlkit.md.java.settings.SettingsActivity"
+            android:exported="false"
+            android:label="@string/settings_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light">
+        </activity>
+        <activity
+            android:name="com.seanlab.qrcode.mlkit.md.java.StillImageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+        </activity>
+
+
+        <activity
+            android:name="com.seanlab.qrcode.mlkit.md.kotlin.MainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.seanlab.qrcode.mlkit.md.kotlin.LiveObjectDetectionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.seanlab.qrcode.mlkit.md.kotlin.LiveBarcodeScanningActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.seanlab.qrcode.mlkit.md.kotlin.StaticObjectDetectionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.seanlab.qrcode.mlkit.md.kotlin.settings.SettingsActivity"
+            android:exported="false"
+            android:label="@string/settings_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light">
+        </activity>
+
+        <!--  google -->
+        <activity
+            android:name="com.seanlab.qrcode.mlkit.ghost.view.LoginActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@style/LoginTheme">
+        </activity>
+
+        <activity
+            android:name="com.seanlab.qrcode.mlkit.ghost.view.PostListActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/CardListActivityTheme">
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+               -->
+        </activity>
+
+        <activity
+            android:name="com.seanlab.qrcode.mlkit.ghost.view.PostViewActivity"
+            android:parentActivityName="com.seanlab.qrcode.mlkit.ghost.view.PostListActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/AppTheme4"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.seanlab.qrcode.mlkit.ghost.view.PostListActivity"/>
+        </activity>
+
+        <activity
+            android:name="com.seanlab.qrcode.mlkit.ghost.view.PostConflictResolutionActivity"
+            android:parentActivityName="com.seanlab.qrcode.mlkit.ghost.view.PostListActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:launchMode="singleTask"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.seanlab.qrcode.mlkit.ghost.view.PostListActivity"/>
+        </activity>
+
+        <activity
+            android:name="com.seanlab.qrcode.mlkit.ghost.view.AboutActivity"
+            android:parentActivityName="com.seanlab.qrcode.mlkit.ghost.view.PostListActivity"
+            android:theme="@style/AppTheme4"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.seanlab.qrcode.mlkit.ghost.view.PostListActivity"/>
+        </activity>
+
+        <activity
+            android:name="com.seanlab.qrcode.mlkit.ghost.view.OpenSourceLibsActivity"
+            android:parentActivityName="com.seanlab.qrcode.mlkit.ghost.view.AboutActivity"
+            
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.seanlab.qrcode.mlkit.ghost.view.AboutActivity"/>
+        </activity>
+        <!--  billing -->
+        <activity
+            android:name="com.seanlab.qrcode.mlkit.md.java.BillingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+        </activity>
+
+
+
+
+    </application>
+</manifest>
